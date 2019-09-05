@@ -22,7 +22,10 @@ export default {
   },
   methods: {
     ...mapActions("banks", ["remove"]),
-    ...mapActions("nav/edit", ["toggle"]),
+    ...mapActions("nav/edit", ["toggle", "off"]),
   },
+  created() {
+    this.off();
+  }
 };
 </script>

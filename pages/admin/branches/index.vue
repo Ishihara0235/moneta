@@ -25,7 +25,12 @@ export default {
     ...mapGetters("branches", ["branches"]),
     ...mapGetters("nav/edit", ["edit"]),
   },
-  methods: mapActions("branches", ["remove"]),
-  methods: mapActions("nav/edit", ["toggle"]),
+  methods: {
+    ...mapActions("branches", ["remove"]),
+    ...mapActions("nav/edit", ["toggle", "off"]),
+  },
+  created() {
+    this.off();
+  }
 };
 </script>

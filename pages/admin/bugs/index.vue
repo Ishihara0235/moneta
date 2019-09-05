@@ -58,8 +58,11 @@ export default {
     },
   },
   methods: {
-    ...mapActions("bugs", ["remove"]),
-    ...mapActions("nav/edit", ["toggle"]),
+    ...mapActions("branches", ["remove"]),
+    ...mapActions("nav/edit", ["toggle", "off"]),
+  },
+   created() {
+    this.off();
   }
 };
 </script>

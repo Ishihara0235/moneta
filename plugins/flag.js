@@ -26,6 +26,9 @@ export default class Flag {
       toggle: ({ commit, getters }) => {
         commit(this.name, !getters[this.name]);
       },
+      [this.name]: ({commit}, payload) => {
+        commit(this.name, payload);
+      }
     };
   }
 }
