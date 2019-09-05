@@ -15,7 +15,7 @@
 
 <script>
 import p5 from "~/middleware/p5";
-import game from "~/middleware/game";
+import game from "~/middleware/p5";
 import { mapGetters } from "vuex";
 
 export default {
